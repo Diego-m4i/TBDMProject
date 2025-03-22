@@ -148,3 +148,18 @@ Nodes_2870 ,Edges_4426
 2020/06/02 01:14:39 Start 
 3sec.
 2020/06/02 01:14:42 List creat prosess done
+ifc_files/IfcOpenHouse_original.ifc
+Nodes_2870 ,Edges_4426
+2025/03/19 07:35:15 Start 
+1sec.
+2025/03/19 07:35:16 List creat prosess done
+ifc_files/IfcOpenHouse_original.ifc
+Nodes_2870 ,Edges_4426
+2025/03/19 07:41:56 Start 
+1sec.
+2025/03/19 07:41:57 List creat prosess done
+ifc_files/IfcOpenHouse_original.ifc
+Nodes_2870 ,Edges_4426
+2025/03/19 07:42:19 Start 
+1sec.
+2025/03/19 07:42:20 List creat prosess done

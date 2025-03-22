@@ -94,7 +94,8 @@ log2 = str(round(time.time() - start)) + "sec.\n" + \
     str(time.strftime("%Y/%m/%d %H:%M:%S", time.strptime(time.ctime()))) + " List creat prosess done"
 
 # Initialize neo4j database
-graph = Graph(auth=('neo4j', 'Neo4j'))  # http://localhost:7474
+graph = Graph("bolt://localhost:7687", auth=("neo4j", "diegodiego"))
+print(graph.run("RETURN 'Connessione riuscita!'").data())
 graph.delete_all()
 
 for node in nodes:

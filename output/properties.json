@@ -1,0 +1,125 @@
+    {
+    "walls": [
+        {
+            "id": 267,
+            "name": "East wall",
+            "overall_width": null,
+            "overall_height": null,
+            "material": null
+        },
+        {
+            "id": 280,
+            "name": "West wall",
+            "overall_width": null,
+            "overall_height": null,
+            "material": null
+        },
+        {
+            "id": 221,
+            "name": "North wall",
+            "overall_width": null,
+            "overall_height": null,
+            "material": null
+        },
+        {
+            "id": 34,
+            "name": "South wall",
+            "overall_width": null,
+            "overall_height": null,
+            "material": null
+        }
+    ],
+    "spatial_structures": [
+        {
+            "id": 2801,
+            "relating_structure": null,
+            "related_elements": [
+                null
+            ]
+        },
+        {
+            "id": 2729,
+            "relating_structure": null,
+            "related_elements": [
+                null
+            ]
+        },
+        {
+            "id": 2657,
+            "relating_structure": null,
+            "related_elements": [
+                null
+            ]
+        },
+        {
+            "id": 2585,
+            "relating_structure": null,
+            "related_elements": [
+                null
+            ]
+        },
+        {
+            "id": 2503,
+            "relating_structure": null,
+            "related_elements": [
+                null
+            ]
+        },
+        {
+            "id": 2435,
+            "relating_structure": null,
+            "related_elements": [
+                null
+            ]
+        },
+        {
+            "id": 2356,
+            "relating_structure": null,
+            "related_elements": [
+                null
+            ]
+        },
+        {
+            "id": 268,
+            "relating_structure": null,
+            "related_elements": [
+                "East wall"
+            ]
+        },
+        {
+            "id": 281,
+            "relating_structure": null,
+            "related_elements": [
+                "West wall"
+            ]
+        },
+        {
+            "id": 192,
+            "relating_structure": null,
+            "related_elements": [
+                "Roof"
+            ]
+        },
+        {
+            "id": 222,
+            "relating_structure": null,
+            "related_elements": [
+                "North wall"
+            ]
+        },
+        {
+            "id": 78,
+            "relating_structure": null,
+            "related_elements": [
+                "Footing"
+            ]
+        },
+        {
+            "id": 35,
+            "relating_structure": null,
+            "related_elements": [
+                "South wall"
+            ]
+        }
+    ]
+}

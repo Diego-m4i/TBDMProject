@@ -75,7 +75,11 @@ print("List creat prosess done. Take for ", time.time() - start)
 print(time.strftime("%Y/%m/%d %H:%M", time.strptime(time.ctime())))
 
 # Initialize neo4j database
-graph = Graph(auth=('neo4j', 'Neo4j'))  # http://localhost:7474
+
+graph = Graph("bolt://localhost:7687", auth=("neo4j", "diegodiego"))
+print(graph.run("RETURN 'Connessione riuscita!'").data())
+
+
 graph.delete_all()
 
 for node in nodes:
@@ -85,7 +89,8 @@ for node in nodes:
         one_node[k] = v
     graph.create(one_node)
 
-graph.run("CREATE INDEX ON :IfcNode(nid)")
+graph.run("CREATE INDEX IF NOT EXISTS FOR (n:IfcNode) ON (n.nid)")
+
 
 print("Node creat prosess done. Take for ", time.time() - start)
 print(time.strftime("%Y/%m/%d %H:%M", time.strptime(time.ctime())))
