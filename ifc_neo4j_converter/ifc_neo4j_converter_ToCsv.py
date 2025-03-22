@@ -36,7 +36,7 @@ log1 = str(time.strftime("%Y/%m/%d %H:%M:%S", time.strptime(time.ctime()))) + " 
 
 # ifc_path = "ifc_files/IfcOpenHouse_original.ifc"
 # ifc_path = "ifc_files/191225_TE-Bld_zone_GEO.ifc"
-ifc_path = "ifc_files/IfcOpenHouse_original.ifc"
+ifc_path = "../ifc_files/IfcOpenHouse_original.ifc"
 
 ####################################################
 # neo4j root path
@@ -167,7 +167,7 @@ print(time.strftime("%Y/%m/%d %H:%M:%S", time.strptime(time.ctime())))
 log2 = str(round(time.time() - start)) + "sec.\n" + \
     str(time.strftime("%Y/%m/%d %H:%M:%S", time.strptime(time.ctime()))) + " List creat prosess done"
 
-with open("log.txt", mode="a") as f:
+with open("../output/log.txt", mode="a") as f:
     f.write(ifc_path + "\n")
     f.write("Nodes_" + str(len(nodes)) + " ,Edges_" + str(len(edges)) + "\n")
     f.write(log1 + "\n")

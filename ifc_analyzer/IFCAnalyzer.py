@@ -75,7 +75,7 @@ class IfcAnalyzer:
                 print(f"Errore nella creazione della directory '{self.output_dir}': {e}")
                 return
 
-        output_json_path = os.path.join(self.output_dir, "properties.json")
+        output_json_path = os.path.join(self.output_dir, "NUOVO.json")
         data = {
             'walls': self.walls,
             'spatial_structures': self.spatial_structures

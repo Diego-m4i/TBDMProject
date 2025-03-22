@@ -73,7 +73,7 @@ if __name__ == "__main__":
     print(centrality_data)
 
     # Esportare i risultati in un file CSV
-    analyzer.export_centrality_data(file_path="centrality_results.csv", limit=10)
+    analyzer.export_centrality_data(file_path="../output/centrality_results.csv", limit=10)
 
     # Chiudere la connessione
     analyzer.close()
