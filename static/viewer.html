@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+        <html lang="it">
+        <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Query Cypher Dinamiche</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+<h1>Interfaccia per Eseguire Query Cypher</h1>
+<textarea id="cypher-query" placeholder="Inserisci la tua query Cypher qui..." rows="5" cols="50"></textarea><br><br>
+<button onclick="executeQuery()">Esegui Query</button>
+<h2>Risultati:</h2>
+<pre id="query-results"></pre>
+
+<script>
+    function executeQuery() {
+        const cypherQuery = document.getElementById("cypher-query").value;
+        $.ajax({
+            url: '/run-cypher',  // Endpoint del server
+            type: 'POST',
+            contentType: 'application/json',
+            data: JSON.stringify({ query: cypherQuery }),
+            success: function(response) {
+                document.getElementById("query-results").textContent = JSON.stringify(response, null, 2);
+            },
+            error: function(error) {
+                document.getElementById("query-results").textContent = 'Errore nell\'eseguire la query: ' + error.responseText;
+            }
+        });
+    }
+</script>
+</body>
+</html>
+</title>
+</head>
+<body>
+
+</body>
+</html>
