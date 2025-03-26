@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/IFC-Neo4j-converter.iml" filepath="$PROJECT_DIR$/.idea/IFC-Neo4j-converter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/TBDMProject.iml" filepath="$PROJECT_DIR$/.idea/TBDMProject.iml" />
     </modules>
   </component>
 </project>
