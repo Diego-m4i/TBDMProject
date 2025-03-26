@@ -82,7 +82,21 @@ docker-compose up -d
     ```
 3. To inserte IFC file, run classes into package "ifc_neo4j_converter"
 4. To analyze the graph create before, run classes into the package "ifc_analyzer"
-5. The package "output" is used to archive output files, created by analyze classes.
+5. **Class CentralityAnalyzer**.
+   The betweenness centrality analysis measures how often a node lies along the shortest paths between other nodes in the graph. A node with a high score is a key point for connecting entities.
+   
+    ####     Requirements
+    Do query cyber:
+
+    ```
+   CALL gds.graph.project(
+   'IfcOpenHouseGraph',  // Nome del grafo
+   '*', // Tutti i nodi
+   '*'  // Tutte le relazioni
+   );
+    ```
+
+6. The package "output" is used to archive output files, created by analyze classes.
 
 ## Notes
 
