@@ -66,7 +66,7 @@ class Neo4jToIfcExporter:
         nodes_to_export.sort(key=lambda x: int(x['nid']))
 
         # Esportazione dei dati ordinati nel file IFC
-        with open('output.ifc', 'w') as f:
+        with open('../output/NewIfcOpenHouseGraph.ifc', 'w') as f:
             f.write('ISO-10303-21;\nHEADER;\n')
             f.write('FILE_DESCRIPTION((\'ViewDefinition [CoordinationView]\'),\'2;1\');\n')
             f.write("FILE_NAME('IfcExport.ifc','2024-04-03T12:00:00',(''),('',''),'IfcOpenShell','IfcOpenShell','');\n")
