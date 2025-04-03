@@ -95,8 +95,8 @@ docker-compose up -d
    '*'  // Tutte le relazioni
    );
     ```
-
-6. The package "output" is used to archive output files, created by analyze classes.
+6. The class "IoTDevice.py" is utilize to connect a node (a sensor IoT), to other node in the graph "IfcOpenHouseGraph";
+7. The package "output" is used to archive output files, created by analyze classes.
 
 ## Notes
 

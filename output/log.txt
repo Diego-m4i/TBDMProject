@@ -163,3 +163,8 @@ Nodes_2870 ,Edges_4426
 2025/03/19 07:42:19 Start 
 1sec.
 2025/03/19 07:42:20 List creat prosess done
+../ifc_files/IfcOpenHouse_original.ifc
+Nodes_2870 ,Edges_4426
+2025/04/02 20:02:19 Start 
+1sec.
+2025/04/02 20:02:20 List creat prosess done
