@@ -1,5 +1,4 @@
 from py2neo import Graph, Node, Relationship
-import ifcopenshell
 
 class IoTDevice:
     def __init__(self, device_id, device_type, properties=None, class_name=None):
@@ -37,18 +36,14 @@ class IoTDevice:
         return iot_node
 
 
-def add_iot_to_ifc_node(graph, ifc_file_path, target_node_id, iot_device):
+def add_iot_to_ifc_node(graph, target_node_id, iot_device):
     """
     Aggiunge un dispositivo IoT a un nodo IfcNode nel grafo Neo4j.
 
     :param graph: Connessione al database Neo4j
-    :param ifc_file_path: Percorso del file IFC (non utilizzato nel codice corrente)
     :param target_node_id: ID del nodo IfcNode a cui collegare il dispositivo IoT
     :param iot_device: Oggetto IoTDevice da aggiungere al nodo IfcNode
     """
-    print(f"Lettura file IFC: {ifc_file_path}")
-    f = ifcopenshell.open(ifc_file_path)
-
     print(f"Verifica nodo IfcNode con ID: {target_node_id} nel grafo")
     node_exists = graph.evaluate("MATCH (n:IfcNode {nid: $nid}) RETURN n", nid=target_node_id)
 
@@ -74,14 +69,16 @@ def add_iot_to_ifc_node(graph, ifc_file_path, target_node_id, iot_device):
 # Connessione a Neo4j
 graph = Graph("bolt://localhost:7687", auth=("neo4j", "diegodiego"))
 
-# Percorso del file IFC
-ifc_path = "../ifc_files/IfcOpenHouse_original.ifc"
-
 # ID del nodo IfcNode a cui collegare il dispositivo IoT
 target_ifc_node_id = 2319
 
 # Creazione del dispositivo IoT con ClassName
-iot_device = IoTDevice(device_id="MK-03", device_type="TemperatureSensor", properties={"temperature": 22.5, "unit": "C"}, class_name="TemperatureSensor")
+iot_device = IoTDevice(
+    device_id="MK-02",
+    device_type="TemperatureSensor",
+    properties={"temperature": 22.5, "unit": "C"},
+    class_name="TemperatureSensor"
+)
 
 # Aggiunta al grafo Neo4j
-add_iot_to_ifc_node(graph, ifc_path, target_ifc_node_id, iot_device)
+add_iot_to_ifc_node(graph, target_ifc_node_id, iot_device)
